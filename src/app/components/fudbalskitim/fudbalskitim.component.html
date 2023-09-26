@@ -1,0 +1,58 @@
+<app-kartice></app-kartice>
+
+<div class="football-field">
+  <div class="teren" (click)="swapPlayers()">
+    <!-- " -->
+    <div class="linija-tima">
+      <div class="player" *ngFor="let igrac of golmani$ | async">
+        <div class="player-circle" (click)="clickedIzlazi(igrac.id)">
+          <div class="player-number">{{ igrac.id }}</div>
+          <div class="player-name">{{ igrac.ime }}</div>
+          <div class="player-rating">{{ igrac.ocena }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="linija-tima">
+      <div class="player" *ngFor="let igrac of odbrambeni$ | async">
+        <div class="player-circle" (click)="clickedIzlazi(igrac.id)">
+          <div class="player-number">{{ igrac.id }}</div>
+          <div class="player-name">{{ igrac.ime }}</div>
+          <div class="player-rating">{{ igrac.ocena }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="linija-tima">
+      <div class="player" *ngFor="let igrac of veznjaci$ | async">
+        <div class="player-circle" (click)="clickedIzlazi(igrac.id)">
+          <div class="player-number">{{ igrac.id }}</div>
+          <div class="player-name">{{ igrac.ime }}</div>
+          <div class="player-rating">{{ igrac.ocena }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="linija-tima">
+      <div class="player" *ngFor="let igrac of napadaci$ | async">
+        <div class="player-circle" (click)="clickedIzlazi(igrac.id)">
+          <div class="player-number">{{ igrac.id }}</div>
+          <div class="player-name">{{ igrac.ime }}</div>
+          <div class="player-rating">{{ igrac.ocena }}</div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+  <div class="zamene">
+    <div class="player substitute" *ngFor="let igrac of igraciZamena$ | async">
+      <div class="player-circle substitute-circle" (click)="clickedUlazi(igrac.id)">
+        <div class="player-number">{{ igrac.id }}</div>
+        <div class="player-name">{{ igrac.ime }}</div>
+        <div class="player-rating">{{ igrac.ocena }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+

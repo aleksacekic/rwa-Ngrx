@@ -1,0 +1,17 @@
+<main class="form-signin w-100 m-auto">
+  <form [formGroup]="form" (submit)="submit()" #registrationForm="ngForm">
+    <h1 class="h3 mb-3 fw-normal">Registruj se</h1>
+
+    <input formControlName="ime" class="form-control" placeholder="Ime" required>
+
+    <input formControlName="email" type="email" class="form-control" placeholder="Email" required>
+
+    <input formControlName="password" type="password" class="form-control" placeholder="Password" required>
+
+    <div *ngIf="registrationForm.submitted && form.invalid" class="alert alert-danger">
+      Sva polja moraju biti popunjena!
+    </div>
+
+    <button class="btn btn-primary w-100 py-2" type="submit">Registruj se</button>
+  </form>
+</main>

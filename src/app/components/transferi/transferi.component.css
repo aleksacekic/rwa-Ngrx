@@ -1,0 +1,32 @@
+.igrac-kolona {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.igrac-podaci {
+  margin-bottom: 10px;
+}
+
+.kupi-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.korisnikInfo{
+  width: auto;
+  max-width: 225px;
+  height: auto;
+  border: 1px solid black;
+  padding: 10px;
+  color: white;
+  background-color: crimson;
+  font-weight: bold;
+}
+
+
+

@@ -1,0 +1,21 @@
+<app-kartice></app-kartice>
+
+<div *ngIf="trenutniKorisnik$ | async as trenutniKorisnik" class="korisnikInfo">
+  <p>Dobrodošli, {{ trenutniKorisnik.ime }}!</p>
+  <p>Vaš virtuelni novac: {{ trenutniKorisnik.virtuelniNovac }}</p>
+</div>
+
+<h2>Transferi</h2>
+
+<div class="igrac-kolona" *ngFor="let igrac of igraciTransferLista">
+  <div class="igrac-podaci">
+    <p>Ime: {{ igrac.ime }}</p>
+    <p>Ocena: {{ igrac.ocena }}</p>
+    <p>Pozicija: {{ igrac.pozicija }}</p>
+    <p>Cena: {{ igrac.cena }}</p>
+  </div>
+  <button class="kupi-button" (click)="kupiIgraca(igrac)"> Kupi igrača</button>
+</div>
+
+
+

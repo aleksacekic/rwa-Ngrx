@@ -1,0 +1,18 @@
+<main class="form-signin">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <h1 class="h3 mb-3 fw-normal">Prijavi se</h1>
+
+    <input formControlName="email" type="email" class="form-control" placeholder="Email">
+
+    <input formControlName="password" type="password" class="form-control" placeholder="Password">
+
+    <button class="btn btn-primary w-100 py-2" type="submit">Prijavi se</button>
+
+  </form>
+  <div *ngIf="neuspesnoLogovanje" style="color: red; margin-top: 10px;">
+    Loše ste uneli email i/ili lozinku, pokušajte ponovo.
+  </div>
+  
+</main>
+

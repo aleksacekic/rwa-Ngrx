@@ -1,0 +1,16 @@
+.kartice{
+  display:flex;
+  justify-content: center;
+  margin-top:30px;
+}
+.kartica{
+  margin-right: 40px;
+  padding: 30px;
+  font-size: larger;
+  background-color: rgb(61, 61, 61);
+  color:white;
+}
+
+.kartica:hover{
+  cursor:pointer;
+}

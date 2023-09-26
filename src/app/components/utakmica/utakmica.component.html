@@ -1,0 +1,27 @@
+<app-kartice></app-kartice>
+
+<div class="utakmica-container">
+  <div class="timovi-container">
+    <div class="nas-tim">
+      <h2>Moj tim</h2>
+      <div>{{ trenutniTim?.naziv }}</div>
+    </div>
+    <div class="svi-timovi">
+      <h2>Izaberi protivnika: </h2>
+      <ul>
+        <div
+          *ngFor="let tim of sviTimovi"
+          (click)="simulateMatch(tim.id)"
+          class="timUtakmica"
+        >
+          {{ tim.naziv }}
+        </div>
+      </ul>
+    </div>
+  </div>
+  <div *ngIf="winner" class="winner-container">
+    <h3>Pobednik</h3>
+    <h4>{{ winner.naziv }}</h4>
+    <h5>Rezultat {{brGolovaMi}} : {{brGolovaProtivnik}}</h5>
+  </div>
+</div>
